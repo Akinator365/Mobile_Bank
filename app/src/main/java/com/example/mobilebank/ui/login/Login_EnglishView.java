@@ -74,5 +74,6 @@ public class Login_EnglishView extends AppCompatActivity
     {
         Intent intent = new Intent(Login_EnglishView.this, Login_MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }

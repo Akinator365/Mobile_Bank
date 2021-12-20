@@ -78,18 +78,21 @@ public class Login_MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(Login_MainActivity.this, Login_EnglishView.class);
         startActivity(intent);
+        finish();
     }
 
     private void registed()
     {
         Intent intent = new Intent(Login_MainActivity.this, Login_RegisterView.class);
         startActivity(intent);
+        finish();
     }
 
     private void forget()
     {
         Intent intent = new Intent(Login_MainActivity.this, Login_ForgetPsw.class);
         startActivity((intent));
+        finish();
     }
     private void logon()
     {
