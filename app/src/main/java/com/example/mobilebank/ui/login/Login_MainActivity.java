@@ -146,6 +146,7 @@ public class Login_MainActivity extends AppCompatActivity
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i)
                     {
+                        phone.setText("");
                     }
                 });
 

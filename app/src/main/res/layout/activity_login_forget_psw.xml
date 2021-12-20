@@ -70,7 +70,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/temp24"
+            android:id="@+id/newpsw"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_below="@+id/temp23"
@@ -93,7 +93,7 @@
             android:id="@+id/ForgetFor"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/temp24"
+            android:layout_below="@+id/newpsw"
             android:layout_marginTop="50dp"
             android:background="#ff00"
             android:text="找回密码"
