@@ -47,4 +47,11 @@
         android:enabled="false"
         android:text="下一步" />
 
+    <Button
+        android:id="@+id/create"
+        android:text="创建"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
 </LinearLayout>
