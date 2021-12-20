@@ -3,7 +3,10 @@ package com.example.mobilebank.ui.dashboard;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -21,12 +24,14 @@ public class Bankcard extends AppCompatActivity {
     private ListView listView;
     private SimpleAdapter adapter;
     private List<Map<String,Object>>list;
+    private PayDatabaseHelper dbhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bankcard);
         setTitle("选择账户");
+
 
         listView = findViewById(R.id.mainListView2);
         list = new ArrayList<>();
@@ -36,21 +41,27 @@ public class Bankcard extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i == 0)
-                {
+
                     //设置返回的数据
 
                     Intent intent = new Intent();
 
-                    intent.putExtra("data", "62320958732905 >");//edtOne.getText().toString().trim()
+                    SQLiteDatabase db = dbhelper.getWritableDatabase();
+                    Cursor cursor = db.query("Card",null,null,null,null,null,null);
+                    cursor.moveToFirst();
+                    {
+                            cursor.move(i);
+                            String cardname = cursor.getString(1);
+                            String cardnum = cursor.getString(2);
+                            intent.putExtra("data", cardnum+ " >");
+                    }
+                    cursor.close();
 
                     setResult(3, intent);
 
                     //关闭当前activity
 
                     finish();
-
-                }
 
             }
         });
@@ -60,13 +71,39 @@ public class Bankcard extends AppCompatActivity {
 
     private List<Map<String,Object>>a()
     {
-        Map<String,Object>map1 = new HashMap<String,Object>();
-        map1.put("图片",R.drawable.bankcard);
-        map1.put("文字1","长城电子借记卡");
-        map1.put("文字2","62320958732905");
-        list.add(map1);
+
+        //Map<String,Object>map1 = new HashMap<String,Object>();
+        ArrayList<Map<String,Object>> mapset = new ArrayList<Map<String,Object>>();
+        dbhelper = new PayDatabaseHelper(this,"info.db",null,1);
+
+        SQLiteDatabase db = dbhelper.getWritableDatabase();
+        Cursor cursor = db.query("Card",null,null,null,null,null,null);
+        int i=0;
+        if(cursor.moveToFirst())
+        {
+
+            do{
+                String cardname = cursor.getString(1);
+                String cardnum = cursor.getString(2);
+                i++;
+                Map<String,Object>map1 = new HashMap<String,Object>();
+                map1.put("图片",R.drawable.bankcard);
+                map1.put("文字1",cardname);
+                map1.put("文字2",cardnum);
+                mapset.add(map1);
+
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+
+        for(int j=0;j<i;j++)
+        {
+            list.add(mapset.get(j));
+        }
         return list;
     }
+
+
 
     @Override
     public void onBackPressed() {
