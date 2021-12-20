@@ -71,7 +71,7 @@ public class Login_RegisterView extends AppCompatActivity
             db.close();
             try
             {
-                Thread.sleep(2000);
+                Thread.sleep(3000);
             } catch (InterruptedException e)
             {
                 return;
@@ -111,7 +111,11 @@ public class Login_RegisterView extends AppCompatActivity
                 new String[]{phone}, null, null, null);
 
         if(cursor.getCount() == 0)
+        {
+            cursor.close();
             return true;
+        }
+        cursor.close();
         return false;
     }
 
