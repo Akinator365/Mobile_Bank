@@ -66,7 +66,10 @@
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="开始缴费" />
+        android:text="开始缴费"
+        android:background="#FF0456D3"
+        android:textColor="#ffff"
+        />
 
 
 </LinearLayout>

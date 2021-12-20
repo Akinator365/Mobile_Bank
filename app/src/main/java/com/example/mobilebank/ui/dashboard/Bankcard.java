@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.example.mobilebank.R;
+import com.example.mobilebank.ui.login.DatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class Bankcard extends AppCompatActivity {
     private ListView listView;
     private SimpleAdapter adapter;
     private List<Map<String,Object>>list;
-    private PayDatabaseHelper dbhelper;
+    private DatabaseHelper dbhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +75,7 @@ public class Bankcard extends AppCompatActivity {
 
         //Map<String,Object>map1 = new HashMap<String,Object>();
         ArrayList<Map<String,Object>> mapset = new ArrayList<Map<String,Object>>();
-        dbhelper = new PayDatabaseHelper(this,"info.db",null,1);
+        dbhelper = new DatabaseHelper(this);
 
         SQLiteDatabase db = dbhelper.getWritableDatabase();
         Cursor cursor = db.query("Card",null,null,null,null,null,null);

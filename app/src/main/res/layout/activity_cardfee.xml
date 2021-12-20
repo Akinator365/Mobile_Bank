@@ -45,13 +45,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:text="下一步" />
+        android:text="下一步"
+        android:background="#FF0456D3"
+        android:textColor="#ffff"
+        />
 
     <Button
-        android:id="@+id/create"
-        android:text="创建"
+        android:id="@+id/createdatabase"
+        android:text="创建数据库"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FF0456D3"
+        android:textColor="#ffff"
+        android:layout_marginTop="10dp"
+        />
+    <Button
+        android:id="@+id/createtable"
+        android:text="创建表格"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0456D3"
+        android:textColor="#ffff"
+        android:layout_marginTop="10dp"
         />
 
 </LinearLayout>

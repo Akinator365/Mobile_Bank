@@ -94,6 +94,8 @@
         android:layout_marginTop="30dp"
         android:textSize="20sp"
         android:text="开始充值"
+        android:background="#FF0456D3"
+        android:textColor="#ffff"
         />
 
     <TextView

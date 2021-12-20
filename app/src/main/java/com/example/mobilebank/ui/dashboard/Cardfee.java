@@ -10,25 +10,27 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mobilebank.R;
-import com.example.mobilebank.ui.login.MyDatabaseHelper;
+import com.example.mobilebank.ui.login.DatabaseHelper;
 
 public class Cardfee extends AppCompatActivity {
 
     private Button next;
     private Button choosecard;
-    private Button createtable;
-    private PayDatabaseHelper dbhelper;
+    private Button createt;
+    private Button created;
+    private DatabaseHelper dbhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cardfee);
-        dbhelper = new PayDatabaseHelper(this,"info.db",null,1);
+        dbhelper = new DatabaseHelper(this);
         setTitle("校园卡");
 
         next = findViewById(R.id.Cardnext);
         choosecard = findViewById(R.id.Cardchoose);
-        createtable = findViewById(R.id.create);
+        created = findViewById(R.id.createdatabase);
+        createt = findViewById(R.id.createtable);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +53,14 @@ public class Cardfee extends AppCompatActivity {
             }
         });
 
-        createtable.setOnClickListener(new View.OnClickListener() {
+        createt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbhelper.getWritableDatabase();
+            }
+        });
+
+        createt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SQLiteDatabase db = dbhelper.getWritableDatabase();
@@ -74,7 +83,7 @@ public class Cardfee extends AppCompatActivity {
         choosecard.setText(str);
 
         String choosecontent = String.valueOf(choosecard.getText());;
-        if(!choosecontent.equals("请选择>"))
+        if(!choosecontent.equals("请选择 >"))
         {
             next.setEnabled(true);
         }
