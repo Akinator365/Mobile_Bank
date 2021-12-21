@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +31,7 @@ public class Cardfee extends AppCompatActivity {
         next = findViewById(R.id.Cardnext);
         choosecard = findViewById(R.id.Cardchoose);
 
+        next.setBackgroundColor(Color.parseColor("#BEBEBE"));
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +65,7 @@ public class Cardfee extends AppCompatActivity {
         if(!cardchosen.equals("请选择 >"))
         {
             next.setEnabled(true);
+            next.setBackgroundColor(Color.parseColor("#0456D3"));
         }
 
     }

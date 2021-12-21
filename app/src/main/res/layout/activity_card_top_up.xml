@@ -83,6 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:inputType="phone"
             android:hint="元"
             android:gravity="center"
             />
@@ -129,5 +130,7 @@
         android:text="确定"
         android:enabled="false"
         android:visibility="gone"
+        android:background="#FF0456D3"
+        android:textColor="#ffff"
         />
 </LinearLayout>

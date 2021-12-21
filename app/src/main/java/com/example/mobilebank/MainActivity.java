@@ -127,6 +127,26 @@ public class MainActivity extends AppCompatActivity {
         db.insert("Card",null,values);
         values.clear();
 
+        values.put("Balance",1000.00);
+        values.put("Cardid","623465465465461975");
+        db.insert("BankSpend",null,values);
+        values.clear();
+
+        values.put("Balance",1000.00);
+        values.put("Cardid","634254354353455555");
+        db.insert("BankSpend",null,values);
+        values.clear();
+
+        values.put("Balance",1000.00);
+        values.put("Cardid","625894554664782549");
+        db.insert("BankSpend",null,values);
+        values.clear();
+
+        values.put("Balance",100.00);
+        values.put("Cardid","623454355543644655");
+        db.insert("BankSpend",null,values);
+        values.clear();
+
         values.put("SchoolCard","118902");
         values.put("Phone","15990736815");
         db.insert("School",null,values);
@@ -143,22 +163,22 @@ public class MainActivity extends AppCompatActivity {
         values.clear();
 
         values.put("SchoolCard","118902");
-        values.put("money","100");
+        values.put("money",100);
         db.insert("Schoolbalance",null,values);
         values.clear();
 
         values.put("SchoolCard","118903");
-        values.put("money","1000");
+        values.put("money",1000);
         db.insert("Schoolbalance",null,values);
         values.clear();
 
         values.put("SchoolCard","118904");
-        values.put("money","10000");
+        values.put("money",10000);
         db.insert("Schoolbalance",null,values);
         values.clear();
 
         values.put("SchoolCard","118905");
-        values.put("money","10000");
+        values.put("money",10000);
         db.insert("Schoolbalance",null,values);
         values.clear();
 

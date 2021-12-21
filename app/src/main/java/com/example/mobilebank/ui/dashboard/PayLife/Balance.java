@@ -39,7 +39,7 @@ public class Balance extends AppCompatActivity {
                 new String[]{app.getcurrschoolcard()}, null, null, null);
         cursor.moveToFirst();
         {
-            balshowsmoney.setText(cursor.getString(1));
+            balshowsmoney.setText(String.valueOf(cursor.getDouble(1)));
         }
         cursor.close();
     }
