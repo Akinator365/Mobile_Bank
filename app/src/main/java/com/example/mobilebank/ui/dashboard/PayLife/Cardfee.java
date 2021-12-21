@@ -1,4 +1,4 @@
-package com.example.mobilebank.ui.dashboard;
+package com.example.mobilebank.ui.dashboard.PayLife;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,21 +16,15 @@ public class Cardfee extends AppCompatActivity {
 
     private Button next;
     private Button choosecard;
-    private Button createt;
-    private Button created;
-    private DatabaseHelper dbhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cardfee);
-        dbhelper = new DatabaseHelper(this);
         setTitle("校园卡");
 
         next = findViewById(R.id.Cardnext);
         choosecard = findViewById(R.id.Cardchoose);
-        created = findViewById(R.id.createdatabase);
-        createt = findViewById(R.id.createtable);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +32,6 @@ public class Cardfee extends AppCompatActivity {
 
                     Intent intent = new Intent(Cardfee.this,Cardinfo.class);
                     startActivity(intent);
-
 
             }
         });
@@ -49,30 +42,10 @@ public class Cardfee extends AppCompatActivity {
                 Intent intent = new Intent(Cardfee.this,Bankcard.class);
                 startActivityForResult(intent, 11);
 
-
             }
         });
 
-        createt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dbhelper.getWritableDatabase();
-            }
-        });
 
-        createt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SQLiteDatabase db = dbhelper.getWritableDatabase();
-                ContentValues values = new ContentValues();
-                values.put("phone","1364738742");
-                values.put("Cardname","中国银行借记卡");
-                values.put("Cardid","6258945467547");
-                db.insert("Card",null,values);
-                values.clear();
-
-            }
-        });
     }
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 

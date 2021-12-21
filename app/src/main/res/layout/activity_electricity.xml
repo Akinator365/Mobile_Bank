@@ -7,7 +7,7 @@
     android:paddingRight="20dp"
     android:paddingTop="50dp"
     android:orientation="vertical"
-    tools:context=".ui.dashboard.Waterfee">
+    tools:context=".ui.dashboard.PayLife.Waterfee">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

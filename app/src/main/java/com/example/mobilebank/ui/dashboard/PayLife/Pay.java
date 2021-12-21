@@ -1,4 +1,4 @@
-package com.example.mobilebank.ui.dashboard;
+package com.example.mobilebank.ui.dashboard.PayLife;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import com.example.mobilebank.R;
 

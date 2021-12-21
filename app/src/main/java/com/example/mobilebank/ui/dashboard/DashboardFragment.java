@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.mobilebank.R;
 import com.example.mobilebank.databinding.FragmentDashboardBinding;
+import com.example.mobilebank.ui.dashboard.PayLife.Pay;
 
 public class DashboardFragment extends Fragment {
 
@@ -53,7 +52,7 @@ public class DashboardFragment extends Fragment {
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Pay.class);
+                Intent intent = new Intent(getActivity(), Pay.class);
                 startActivity(intent);
                 
             }

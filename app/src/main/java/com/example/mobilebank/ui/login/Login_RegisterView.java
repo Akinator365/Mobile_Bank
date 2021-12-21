@@ -66,6 +66,12 @@ public class Login_RegisterView extends AppCompatActivity
             values.put("Phone", phone);
             values.put("Password", password);
             db.insert("information", null, values);
+            values.clear();
+            values.put("Phone", phone);
+            values.put("Name","null");
+            db.insert("User", null, values);
+            values.clear();
+
             Toast.makeText(this, "注册成功！ 即将转至登陆界面", Toast.LENGTH_LONG).show();
             db.close();
             try

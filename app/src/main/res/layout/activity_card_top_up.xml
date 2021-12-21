@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context="com.example.mobilebank.ui.dashboard.CardTopUp">
+    tools:context="com.example.mobilebank.ui.dashboard.PayLife.CardTopUp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,7 +108,7 @@
         android:visibility="gone"
         />
 
-    <com.example.mobilebank.ui.dashboard.PhoneCode
+    <com.example.mobilebank.ui.dashboard.PayLife.PhoneCode
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/pc_2"

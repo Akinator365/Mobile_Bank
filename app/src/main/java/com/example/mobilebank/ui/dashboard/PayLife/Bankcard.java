@@ -1,4 +1,4 @@
-package com.example.mobilebank.ui.dashboard;
+package com.example.mobilebank.ui.dashboard.PayLife;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +26,7 @@ public class Bankcard extends AppCompatActivity {
     private SimpleAdapter adapter;
     private List<Map<String,Object>>list;
     private DatabaseHelper dbhelper;
+    private String currphone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class Bankcard extends AppCompatActivity {
 
 
         listView = findViewById(R.id.mainListView2);
+        dbhelper = new DatabaseHelper(this);
+        currphone = getcurrentuser();
         list = new ArrayList<>();
         adapter = new SimpleAdapter(this,a(),R.layout.item2,new String[]{"图片","文字1","文字2"},new int []{R.id.itemImageView1,R.id.itemTextView1,R.id.itemTextView2});
         listView.setAdapter(adapter);
@@ -72,13 +75,11 @@ public class Bankcard extends AppCompatActivity {
 
     private List<Map<String,Object>>a()
     {
-
-        //Map<String,Object>map1 = new HashMap<String,Object>();
         ArrayList<Map<String,Object>> mapset = new ArrayList<Map<String,Object>>();
-        dbhelper = new DatabaseHelper(this);
 
         SQLiteDatabase db = dbhelper.getWritableDatabase();
-        Cursor cursor = db.query("Card",null,null,null,null,null,null);
+        Cursor cursor = db.query("Card", null, "Phone=?",
+                new String[]{currphone}, null, null, null);
         int i=0;
         if(cursor.moveToFirst())
         {
@@ -102,6 +103,26 @@ public class Bankcard extends AppCompatActivity {
             list.add(mapset.get(j));
         }
         return list;
+    }
+
+    private String getcurrentuser()
+    {
+        SQLiteDatabase db = dbhelper.getWritableDatabase();
+        Cursor cursor = db.query("Current", null, null,
+                null, null, null, null);
+        cursor.moveToFirst();
+        String currnum = "error";
+        if(cursor.getCount() == 0)
+        {
+            //TODO: 错误
+        }
+        else {
+            currnum = cursor.getString(0);
+            Log.d("bank",currnum);
+        }
+        cursor.close();
+        db.close();
+        return currnum;
     }
 
 

@@ -1,4 +1,4 @@
-package com.example.mobilebank.ui.dashboard;
+package com.example.mobilebank.ui.dashboard.PayLife;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -58,6 +58,7 @@ public class CardTopUp extends AppCompatActivity {
                 //TODO:例如底部【下一步】按钮不可点击
             }
         });
+
     }
 
     private void test(){

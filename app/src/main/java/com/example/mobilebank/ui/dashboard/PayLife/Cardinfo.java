@@ -1,4 +1,4 @@
-package com.example.mobilebank.ui.dashboard;
+package com.example.mobilebank.ui.dashboard.PayLife;
 
 import androidx.appcompat.app.AppCompatActivity;
 

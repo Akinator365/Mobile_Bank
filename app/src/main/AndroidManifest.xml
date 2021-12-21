@@ -22,34 +22,34 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.Balance"
+            android:name=".ui.dashboard.PayLife.Balance"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.Payhistory"
+            android:name=".ui.dashboard.PayLife.Payhistory"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.CardTopUp"
+            android:name=".ui.dashboard.PayLife.CardTopUp"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.Bankcard"
+            android:name=".ui.dashboard.PayLife.Bankcard"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.Cardinfo"
+            android:name=".ui.dashboard.PayLife.Cardinfo"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.Cardfee"
+            android:name=".ui.dashboard.PayLife.Cardfee"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.Schoolfare"
+            android:name=".ui.dashboard.PayLife.Schoolfare"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.Electricity"
+            android:name=".ui.dashboard.PayLife.Electricity"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.Waterfee"
+            android:name=".ui.dashboard.PayLife.Waterfee"
             android:exported="false" />
         <activity
-            android:name=".ui.dashboard.Pay"
+            android:name=".ui.dashboard.PayLife.Pay"
             android:exported="false" />
         <activity
             android:name=".ui.login.Login_MainActivity"

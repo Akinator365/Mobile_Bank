@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,9 +13,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.mobilebank.MainActivity;
 import com.example.mobilebank.R;
 import com.example.mobilebank.databinding.FragmentNotificationsBinding;
-import com.example.mobilebank.ui.dashboard.Pay;
 import com.example.mobilebank.ui.login.Login_MainActivity;
 
 public class NotificationsFragment extends Fragment {
@@ -54,7 +52,7 @@ public class NotificationsFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Login_MainActivity.class);
                 startActivity(intent);
-                getActivity().onBackPressed();
+                getActivity().finish();
             }
         });
     }

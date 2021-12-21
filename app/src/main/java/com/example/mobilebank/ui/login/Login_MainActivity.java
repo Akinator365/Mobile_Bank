@@ -4,6 +4,7 @@ package com.example.mobilebank.ui.login;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -29,7 +30,6 @@ public class Login_MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_main);
-
         init();
 
     }
@@ -54,7 +54,10 @@ public class Login_MainActivity extends AppCompatActivity
         wechat.setOnClickListener(onclick);
 
         helper = new DatabaseHelper(this);
+
     }
+
+
 
     private class Onclick implements View.OnClickListener
     {
@@ -155,12 +158,13 @@ public class Login_MainActivity extends AppCompatActivity
 
             else
             {
-                if(password.equals(cursor.getString(2)))
+                if(password.equals(cursor.getString(1)))
                 {
+
+                    Intent intent = new Intent(Login_MainActivity.this,MainActivity.class);
+                    intent.putExtra("send",cursor.getString(0));
                     cursor.close();
-                    Intent intent = new Intent(Login_MainActivity.this,
-                            MainActivity.class);
-                    startActivity((intent));
+                    startActivity(intent);
                     finish();
                 }
                 else
