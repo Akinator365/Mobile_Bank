@@ -27,11 +27,11 @@
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/MobileBank/app/src/main/res/layout/item.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/MobileBank/app/src/main/res/layout/item2.xml" value="0.19479166666666667" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/MobileBank/app/src/main/res/menu/bottom_nav_menu.xml" value="0.30885416666666665" />
-        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_balance.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_balance.xml" value="0.264" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_bankcard.xml" value="0.3078125" />
-        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_card_top_up.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_card_top_up.xml" value="0.264" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_cardfee.xml" value="0.30885416666666665" />
-        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_cardinfo.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_cardinfo.xml" value="0.264" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_electricity.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_login_english_view.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_login_forget_psw.xml" value="0.16354166666666667" />
@@ -39,7 +39,7 @@
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_login_register_view.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_main.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_pay.xml" value="0.3078125" />
-        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_payhistory.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_payhistory.xml" value="0.264" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_schoolfare.xml" value="0.30885416666666665" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_waterfee.xml" value="0.30885416666666665" />
         <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/fragment_dashboard.xml" value="0.3078125" />

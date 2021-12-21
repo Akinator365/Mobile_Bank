@@ -6,16 +6,20 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.mobilebank.R;
 import com.example.mobilebank.ui.login.DatabaseHelper;
 
+import java.security.PrivateKey;
+
 public class Cardfee extends AppCompatActivity {
 
     private Button next;
     private Button choosecard;
+    private String cardchosen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +33,8 @@ public class Cardfee extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                     Intent intent = new Intent(Cardfee.this,Cardinfo.class);
+                    intent.putExtra("send",cardchosen);
                     startActivity(intent);
 
             }
@@ -55,8 +59,8 @@ public class Cardfee extends AppCompatActivity {
 
         choosecard.setText(str);
 
-        String choosecontent = String.valueOf(choosecard.getText());;
-        if(!choosecontent.equals("请选择 >"))
+        cardchosen = String.valueOf(choosecard.getText());;
+        if(!cardchosen.equals("请选择 >"))
         {
             next.setEnabled(true);
         }

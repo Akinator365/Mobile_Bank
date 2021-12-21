@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.mobilebank.Data;
 import com.example.mobilebank.R;
 
 public class CardTopUp extends AppCompatActivity {
@@ -17,6 +18,8 @@ public class CardTopUp extends AppCompatActivity {
     private Button define;
     private TextView mytip;
     private EditText editmoney;
+    private TextView topshowbank;
+    private TextView topshowschool;
 
 
     @Override
@@ -24,6 +27,14 @@ public class CardTopUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_top_up);
         setTitle("校园卡");
+
+        final Data app = (Data)getApplication();
+
+        topshowbank = findViewById(R.id.topbank);
+        topshowschool = findViewById(R.id.topschool);
+
+        topshowbank.setText(app.getcurrbankcard());
+        topshowschool.setText(app.getcurrschoolcard());
 
         starttop = findViewById(R.id.cardstart);
         Pc_2 = findViewById(R.id.pc_2);

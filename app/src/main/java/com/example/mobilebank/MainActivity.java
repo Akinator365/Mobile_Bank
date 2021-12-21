@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         currentacc = i.getStringExtra("send");
+        final Data app = (Data)getApplication();
+        app.setcurrentuser(currentacc);
 
         makedata();
     }
@@ -57,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
     private void makedata() {
         SQLiteDatabase db = dbhelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-
-        db.execSQL("DELETE FROM Current");
 
         values.put("Name","林伟涵");
         values.put("Phone","15990736815");
@@ -87,11 +87,6 @@ public class MainActivity extends AppCompatActivity {
             currname = cursor.getString(1);
         }
         cursor.close();
-
-        values.put("Phone",currentacc);
-        values.put("Name",currname);
-        db.insert("Current",null,values);
-        values.clear();
 
         values.put("Phone","15990736815");
         values.put("Password","123456");
@@ -130,6 +125,104 @@ public class MainActivity extends AppCompatActivity {
         values.put("Cardname","中国银行信用卡");
         values.put("Cardid","623454355543644655");
         db.insert("Card",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118902");
+        values.put("Phone","15990736815");
+        db.insert("School",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118903");
+        values.put("Phone","12345678901");
+        db.insert("School",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118904");
+        values.put("Phone","12345678902");
+        db.insert("School",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118902");
+        values.put("money","100");
+        db.insert("Schoolbalance",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118903");
+        values.put("money","1000");
+        db.insert("Schoolbalance",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118904");
+        values.put("money","10000");
+        db.insert("Schoolbalance",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118905");
+        values.put("money","10000");
+        db.insert("Schoolbalance",null,values);
+        values.clear();
+
+        values.put("TIME","13:20");
+        values.put("DAYTIME","2020-12-21");
+        values.put("SchoolCard","118902");
+        values.put("Money","5.00");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","21:58");
+        values.put("DAYTIME","2021-06-30");
+        values.put("SchoolCard","118902");
+        values.put("Money","17.50");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","08:34");
+        values.put("DAYTIME","2019-09-01");
+        values.put("SchoolCard","118902");
+        values.put("Money","3.50");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","12:20");
+        values.put("DAYTIME","2020-03-29");
+        values.put("SchoolCard","118902");
+        values.put("Money","9.00");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","14:50");
+        values.put("DAYTIME","2021-01-08");
+        values.put("SchoolCard","118902");
+        values.put("Money","20.00");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","10:20");
+        values.put("DAYTIME","2019-11-30");
+        values.put("SchoolCard","118902");
+        values.put("Money","15.00");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","18:10");
+        values.put("DAYTIME","2018-10-19");
+        values.put("SchoolCard","118903");
+        values.put("Money","13.88");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","13:42");
+        values.put("DAYTIME","2020-12-21");
+        values.put("SchoolCard","118903");
+        values.put("Money","14.88");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","22:35");
+        values.put("DAYTIME","2018-06-13");
+        values.put("SchoolCard","118904");
+        values.put("Money","19.88");
+        db.insert("SchoolSpend",null,values);
         values.clear();
 
         db.close();

@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.example.mobilebank.Data;
 import com.example.mobilebank.R;
 import com.example.mobilebank.ui.login.DatabaseHelper;
 
@@ -34,10 +35,10 @@ public class Bankcard extends AppCompatActivity {
         setContentView(R.layout.activity_bankcard);
         setTitle("选择账户");
 
-
+        final Data app = (Data)getApplication();
         listView = findViewById(R.id.mainListView2);
         dbhelper = new DatabaseHelper(this);
-        currphone = getcurrentuser();
+        currphone = app.getcurrentuser();
         list = new ArrayList<>();
         adapter = new SimpleAdapter(this,a(),R.layout.item2,new String[]{"图片","文字1","文字2"},new int []{R.id.itemImageView1,R.id.itemTextView1,R.id.itemTextView2});
         listView.setAdapter(adapter);
@@ -51,7 +52,8 @@ public class Bankcard extends AppCompatActivity {
                     Intent intent = new Intent();
 
                     SQLiteDatabase db = dbhelper.getWritableDatabase();
-                    Cursor cursor = db.query("Card",null,null,null,null,null,null);
+                    Cursor cursor = db.query("Card", null, "Phone=?",
+                            new String[]{currphone}, null, null, null);
                     cursor.moveToFirst();
                     {
                             cursor.move(i);
@@ -104,27 +106,6 @@ public class Bankcard extends AppCompatActivity {
         }
         return list;
     }
-
-    private String getcurrentuser()
-    {
-        SQLiteDatabase db = dbhelper.getWritableDatabase();
-        Cursor cursor = db.query("Current", null, null,
-                null, null, null, null);
-        cursor.moveToFirst();
-        String currnum = "error";
-        if(cursor.getCount() == 0)
-        {
-            //TODO: 错误
-        }
-        else {
-            currnum = cursor.getString(0);
-            Log.d("bank",currnum);
-        }
-        cursor.close();
-        db.close();
-        return currnum;
-    }
-
 
 
     @Override
