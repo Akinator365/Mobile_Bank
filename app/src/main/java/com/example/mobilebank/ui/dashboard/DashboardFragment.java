@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.mobilebank.R;
 import com.example.mobilebank.databinding.FragmentDashboardBinding;
+import com.example.mobilebank.ui.dashboard.BillingRecords.Record;
 import com.example.mobilebank.ui.dashboard.PayLife.Pay;
 
 public class DashboardFragment extends Fragment {
@@ -47,14 +48,23 @@ public class DashboardFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ImageButton btn_send = (ImageButton) getActivity().findViewById(R.id.shenghuo);
-
-        btn_send.setOnClickListener(new View.OnClickListener() {
+        ImageButton btn_shenghuo = (ImageButton) getActivity().findViewById(R.id.shenghuo);
+        btn_shenghuo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Pay.class);
                 startActivity(intent);
                 
+            }
+        });
+
+
+        ImageButton btn_zhangdan = (ImageButton) getActivity().findViewById(R.id.zhangdan);
+        btn_zhangdan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Record.class);
+                startActivity(intent);
             }
         });
     }

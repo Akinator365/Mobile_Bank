@@ -16,6 +16,14 @@
         android:src="@drawable/shenghuo"
         />
 
+    <ImageButton
+        android:id="@+id/zhangdan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/zhangdan"
+        />
+
 
 
 </LinearLayout >

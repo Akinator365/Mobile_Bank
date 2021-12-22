@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileBank">
         <activity
+            android:name=".ui.dashboard.BillingRecords.Record"
+            android:exported="false" />
+        <activity
             android:name=".ui.showbankcard.addcard"
             android:exported="false" />
         <activity
