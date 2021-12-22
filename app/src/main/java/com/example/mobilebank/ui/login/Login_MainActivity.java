@@ -54,9 +54,9 @@ public class Login_MainActivity extends AppCompatActivity
         wechat.setOnClickListener(onclick);
 
         helper = new DatabaseHelper(this);
+        makedata();//数据载入
 
     }
-
 
 
     private class Onclick implements View.OnClickListener
@@ -176,5 +176,213 @@ public class Login_MainActivity extends AppCompatActivity
             }
         }
 
+    }
+
+    //数据载入
+    private void makedata() {
+        SQLiteDatabase db = helper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("Name","林伟涵");
+        values.put("Phone","15990736815");
+        db.insert("User",null,values);
+        values.clear();
+
+        values.put("Name","林驰程");
+        values.put("Phone","12345678901");
+        db.insert("User",null,values);
+        values.clear();
+
+        values.put("Name","尤培杰");
+        values.put("Phone","12345678902");
+        db.insert("User",null,values);
+        values.clear();
+
+        values.put("Phone","15990736815");
+        values.put("Password","123456");
+        db.insert("information",null,values);
+        values.clear();
+
+        values.put("Phone","12345678901");
+        values.put("Password","123456");
+        db.insert("information",null,values);
+        values.clear();
+
+        values.put("Phone","12345678902");
+        values.put("Password","123456");
+        db.insert("information",null,values);
+        values.clear();
+
+        values.put("Phone","15990736815");
+        values.put("Cardname","中国银行借记卡");
+        values.put("Cardid","623465465465461975");
+        values.put("Balance",10000.0);
+        db.insert("Card",null,values);
+        values.clear();
+
+        values.put("Phone","15990736815");
+        values.put("Cardname","中国银行储蓄卡");
+        values.put("Cardid","634254354353455555");
+        values.put("Balance",1000.0);
+        db.insert("Card",null,values);
+        values.clear();
+
+        values.put("Phone","12345678901");
+        values.put("Cardname","中国银行储蓄卡");
+        values.put("Cardid","625894554664782549");
+        values.put("Balance",100000.0);
+        db.insert("Card",null,values);
+        values.clear();
+
+        values.put("Phone","12345678902");
+        values.put("Cardname","中国银行信用卡");
+        values.put("Cardid","623454355543644655");
+        values.put("Balance",5000.0);
+        db.insert("Card",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118902");
+        values.put("Phone","15990736815");
+        db.insert("School",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118903");
+        values.put("Phone","12345678901");
+        db.insert("School",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118904");
+        values.put("Phone","12345678902");
+        db.insert("School",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118902");
+        values.put("money",100);
+        db.insert("Schoolbalance",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118903");
+        values.put("money",1000);
+        db.insert("Schoolbalance",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118904");
+        values.put("money",10000);
+        db.insert("Schoolbalance",null,values);
+        values.clear();
+
+        values.put("SchoolCard","118905");
+        values.put("money",10000);
+        db.insert("Schoolbalance",null,values);
+        values.clear();
+
+        values.put("TIME","13:20");
+        values.put("DAYTIME","2020-12-21");
+        values.put("SchoolCard","118902");
+        values.put("Money","5.00");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","21:58");
+        values.put("DAYTIME","2021-06-30");
+        values.put("SchoolCard","118902");
+        values.put("Money","17.50");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","08:34");
+        values.put("DAYTIME","2019-09-01");
+        values.put("SchoolCard","118902");
+        values.put("Money","3.50");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","12:20");
+        values.put("DAYTIME","2020-03-29");
+        values.put("SchoolCard","118902");
+        values.put("Money","9.00");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","14:50");
+        values.put("DAYTIME","2021-01-08");
+        values.put("SchoolCard","118902");
+        values.put("Money","20.00");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","10:20");
+        values.put("DAYTIME","2019-11-30");
+        values.put("SchoolCard","118902");
+        values.put("Money","15.00");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","18:10");
+        values.put("DAYTIME","2018-10-19");
+        values.put("SchoolCard","118903");
+        values.put("Money","13.88");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","13:42");
+        values.put("DAYTIME","2020-12-21");
+        values.put("SchoolCard","118903");
+        values.put("Money","14.88");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("TIME","22:35");
+        values.put("DAYTIME","2018-06-13");
+        values.put("SchoolCard","118904");
+        values.put("Money","19.88");
+        db.insert("SchoolSpend",null,values);
+        values.clear();
+
+        values.put("Waternum","1234567");
+        values.put("Watertopay",130.02);
+        db.insert("Waterfee",null,values);
+        values.clear();
+
+        values.put("Waternum","7654321");
+        values.put("Watertopay",0.00);
+        db.insert("Waterfee",null,values);
+        values.clear();
+
+        values.put("Electrnum","1234567654321");
+        values.put("Electrtopay",289.70);
+        db.insert("electricityfee",null,values);
+        values.clear();
+
+        values.put("Electrnum","7654321234567");
+        values.put("Electrtopay",0.00);
+        db.insert("electricityfee",null,values);
+        values.clear();
+
+        values.put("Studentnum","08192819");
+        values.put("Year","2019");
+        values.put("Fare",7000.00);
+        db.insert("schoolfare",null,values);
+        values.clear();
+
+        values.put("Studentnum","08192819");
+        values.put("Year","2020");
+        values.put("Fare",7000.00);
+        db.insert("schoolfare",null,values);
+        values.clear();
+
+        values.put("Studentnum","12345678");
+        values.put("Year","2019");
+        values.put("Fare",7000.00);
+        db.insert("schoolfare",null,values);
+        values.clear();
+
+        values.put("Studentnum","87654321");
+        values.put("Year","2019");
+        values.put("Fare",7000.00);
+        db.insert("schoolfare",null,values);
+        values.clear();
+
+        db.close();
     }
 }
