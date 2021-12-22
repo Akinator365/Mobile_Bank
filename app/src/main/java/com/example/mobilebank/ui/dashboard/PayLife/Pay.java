@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.example.mobilebank.Data;
 import com.example.mobilebank.R;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class Pay extends AppCompatActivity {
         setContentView(R.layout.activity_pay);
         setTitle("生活缴费");
         listView = findViewById(R.id.mainListView1);
+        final Data app = (Data)getApplication();
         list = new ArrayList<>();
         adapter = new SimpleAdapter(this,a(),R.layout.item,new String[]{"图片","文字"},new int []{R.id.itemImageView1,R.id.itemTextView1});
         listView.setAdapter(adapter);
@@ -37,21 +39,25 @@ public class Pay extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i == 0)
                 {
+                    app.setlastview(0);
                     Intent intent = new Intent(Pay.this,Waterfee.class);
                     startActivity(intent);
                 }
                 if(i == 1)
                 {
+                    app.setlastview(1);
                     Intent intent = new Intent(Pay.this,Electricity.class);
                     startActivity(intent);
                 }
                 if(i == 2)
                 {
+                    app.setlastview(2);
                     Intent intent = new Intent(Pay.this,Schoolfare.class);
                     startActivity(intent);
                 }
                 if(i == 3)
                 {
+                    app.setlastview(3);
                     Intent intent = new Intent(Pay.this,Cardfee.class);
                     startActivity(intent);
                 }

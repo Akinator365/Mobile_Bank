@@ -58,11 +58,11 @@ public class Payhistory extends AppCompatActivity {
 
 
         fiveshowbank.setText(app.getcurrbankcard());
-        fiveshowschool.setText(app.getcurrschoolcard());
+        fiveshowschool.setText(app.getCurrPayid());
 
         SQLiteDatabase db = dbhelper.getWritableDatabase();
         Cursor cursor = db.query("SchoolSpend", null, "SchoolCard=?",
-                new String[]{app.getcurrschoolcard()}, null, null, null);
+                new String[]{app.getCurrPayid()}, null, null, null);
         int i=0;
         if(cursor.moveToFirst())
         {

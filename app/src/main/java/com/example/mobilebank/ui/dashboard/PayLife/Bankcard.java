@@ -59,6 +59,7 @@ public class Bankcard extends AppCompatActivity {
                             cursor.move(i);
                             String cardname = cursor.getString(1);
                             String cardnum = cursor.getString(2);
+                            app.setcurrbankcard(cardnum);
                             intent.putExtra("data", cardnum+ " >");
                     }
                     cursor.close();

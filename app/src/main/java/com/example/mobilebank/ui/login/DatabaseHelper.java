@@ -34,6 +34,18 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + "SchoolCard VARCHAR(20),"
             + "Money VARCHAR(20)) ";
 
+    private static final String Createwaterfee = "create table Waterfee("
+            + "Waternum VARCHAR(20) PRIMARY KEY,"
+            + "Watertopay DOUBLE) ";
+
+    private static final String Createlectrfee = "create table electricityfee("
+            + "Electrnum VARCHAR(20) PRIMARY KEY,"
+            + "Electrtopay DOUBLE) ";
+
+    private static final String Creatschoolfare = "create table schoolfare("
+            + "Studentnum VARCHAR(20),"
+            + "Year VARCHAR(20),"
+            + "Fare DOUBLE)";
 
     public DatabaseHelper(Context context)
     {
@@ -55,6 +67,12 @@ public class DatabaseHelper extends SQLiteOpenHelper
         sqLiteDatabase.execSQL(Createbalance);
         //存储消费记录
         sqLiteDatabase.execSQL(Createspend);
+        //存储水费欠费情况
+        sqLiteDatabase.execSQL(Createwaterfee);
+        //存储电费欠费情况
+        sqLiteDatabase.execSQL(Createlectrfee);
+        //存储学费欠费情况
+        sqLiteDatabase.execSQL(Creatschoolfare);
 
     }
 

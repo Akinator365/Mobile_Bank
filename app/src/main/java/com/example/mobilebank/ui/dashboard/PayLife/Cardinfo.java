@@ -49,8 +49,8 @@ public class Cardinfo extends AppCompatActivity {
                 new String[]{app.getcurrentuser()}, null, null, null);
         cursor.moveToFirst();
         {
-            app.setcurrschoolcard(cursor.getString(0));
-            showschoolcard.setText(app.getcurrschoolcard());
+            app.setCurrPayid(cursor.getString(0));
+            showschoolcard.setText(app.getCurrPayid());
         }
         cursor.close();
 

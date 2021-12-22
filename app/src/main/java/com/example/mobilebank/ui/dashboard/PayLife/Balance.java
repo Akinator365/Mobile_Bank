@@ -32,11 +32,11 @@ public class Balance extends AppCompatActivity {
         balshowsmoney = findViewById(R.id.moneyview);
 
         balshowbank.setText(app.getcurrbankcard());
-        balshowschool.setText(app.getcurrschoolcard());
+        balshowschool.setText(app.getCurrPayid());
 
         SQLiteDatabase db = dbhelper.getWritableDatabase();
         Cursor cursor = db.query("Schoolbalance", null, "SchoolCard=?",
-                new String[]{app.getcurrschoolcard()}, null, null, null);
+                new String[]{app.getCurrPayid()}, null, null, null);
         cursor.moveToFirst();
         {
             balshowsmoney.setText(String.valueOf(cursor.getDouble(1)));

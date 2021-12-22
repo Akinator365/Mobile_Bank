@@ -21,7 +21,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="请选择关联校园卡的银行卡"
+            android:text="请选择用于支付的银行卡"
             android:textSize="18sp"
             />
 
@@ -46,6 +46,39 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="下一步"
+        android:background="#FF0456D3"
+        android:textColor="#ffff"
+        />
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:text="请输入手机验证码"
+        android:visibility="gone"
+        />
+
+    <com.example.mobilebank.ui.dashboard.PayLife.PhoneCode
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pc_1"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/def"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:text="确定"
+        android:enabled="false"
+        android:visibility="gone"
         android:background="#FF0456D3"
         android:textColor="#ffff"
         />

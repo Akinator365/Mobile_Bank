@@ -106,28 +106,28 @@ public class MainActivity extends AppCompatActivity {
         values.put("Phone","15990736815");
         values.put("Cardname","中国银行借记卡");
         values.put("Cardid","623465465465461975");
-        values.put("Balance",1000.0);
+        values.put("Balance",10000.0);
         db.insert("Card",null,values);
         values.clear();
 
         values.put("Phone","15990736815");
         values.put("Cardname","中国银行储蓄卡");
         values.put("Cardid","634254354353455555");
-        values.put("Balance",100.0);
+        values.put("Balance",1000.0);
         db.insert("Card",null,values);
         values.clear();
 
         values.put("Phone","12345678901");
         values.put("Cardname","中国银行储蓄卡");
         values.put("Cardid","625894554664782549");
-        values.put("Balance",10000.0);
+        values.put("Balance",100000.0);
         db.insert("Card",null,values);
         values.clear();
 
         values.put("Phone","12345678902");
         values.put("Cardname","中国银行信用卡");
         values.put("Cardid","623454355543644655");
-        values.put("Balance",500.0);
+        values.put("Balance",5000.0);
         db.insert("Card",null,values);
         values.clear();
 
@@ -228,6 +228,51 @@ public class MainActivity extends AppCompatActivity {
         values.put("Money","19.88");
         db.insert("SchoolSpend",null,values);
         values.clear();
+
+        values.put("Waternum","1234567");
+        values.put("Watertopay",130.02);
+        db.insert("Waterfee",null,values);
+        values.clear();
+
+        values.put("Waternum","7654321");
+        values.put("Watertopay",0.00);
+        db.insert("Waterfee",null,values);
+        values.clear();
+
+        values.put("Electrnum","1234567654321");
+        values.put("Electrtopay",289.70);
+        db.insert("electricityfee",null,values);
+        values.clear();
+
+        values.put("Electrnum","7654321234567");
+        values.put("Electrtopay",0.00);
+        db.insert("electricityfee",null,values);
+        values.clear();
+
+        values.put("Studentnum","08192819");
+        values.put("Year","2019");
+        values.put("Fare",7000.00);
+        db.insert("schoolfare",null,values);
+        values.clear();
+
+        values.put("Studentnum","08192819");
+        values.put("Year","2020");
+        values.put("Fare",7000.00);
+        db.insert("schoolfare",null,values);
+        values.clear();
+
+        values.put("Studentnum","12345678");
+        values.put("Year","2019");
+        values.put("Fare",7000.00);
+        db.insert("schoolfare",null,values);
+        values.clear();
+
+        values.put("Studentnum","87654321");
+        values.put("Year","2019");
+        values.put("Fare",7000.00);
+        db.insert("schoolfare",null,values);
+        values.clear();
+
 
         db.close();
     }

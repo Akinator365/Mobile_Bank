@@ -56,7 +56,7 @@ public class CardTopUp extends AppCompatActivity {
         topshowschool = findViewById(R.id.topschool);
 
         topshowbank.setText(app.getcurrbankcard());
-        topshowschool.setText(app.getcurrschoolcard());
+        topshowschool.setText(app.getCurrPayid());
 
         starttop = findViewById(R.id.cardstart);
         Pc_2 = findViewById(R.id.pc_2);
@@ -123,7 +123,7 @@ public class CardTopUp extends AppCompatActivity {
                         values.clear();
 
                         cursor = db.query("Schoolbalance", null, "SchoolCard=?",
-                                new String[]{app.getcurrschoolcard()}, null, null, null);
+                                new String[]{app.getCurrPayid()}, null, null, null);
 
                         Double newmoney;
                         cursor.moveToFirst();
@@ -134,7 +134,7 @@ public class CardTopUp extends AppCompatActivity {
 
                         values.put("money",newmoney);
                         db.update("Schoolbalance", values, "SchoolCard=?",
-                                new String[]{app.getcurrschoolcard()});
+                                new String[]{app.getCurrPayid()});
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(CardTopUp.this);
                         builder.setTitle("提示");
