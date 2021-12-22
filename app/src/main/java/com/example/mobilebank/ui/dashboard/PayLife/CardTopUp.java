@@ -105,11 +105,11 @@ public class CardTopUp extends AppCompatActivity {
 
                     Double currmoney;
                     SQLiteDatabase db = dbhelper.getWritableDatabase();
-                    Cursor cursor = db.query("BankSpend", null, "Cardid=?",
+                    Cursor cursor = db.query("Card", null, "Cardid=?",
                             new String[]{app.getcurrbankcard()}, null, null, null);
                     cursor.moveToFirst();
                     {
-                        currmoney = cursor.getDouble(1);
+                        currmoney = cursor.getDouble(3);
                     }
                     cursor.close();
 
@@ -118,7 +118,7 @@ public class CardTopUp extends AppCompatActivity {
                     {
                         ContentValues values = new ContentValues();
                         values.put("Balance",currmoney-moneycost);
-                        db.update("BankSpend", values, "Cardid=?",
+                        db.update("Card", values, "Cardid=?",
                                 new String[]{app.getcurrbankcard()});
                         values.clear();
 

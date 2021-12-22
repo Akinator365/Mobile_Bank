@@ -106,45 +106,29 @@ public class MainActivity extends AppCompatActivity {
         values.put("Phone","15990736815");
         values.put("Cardname","中国银行借记卡");
         values.put("Cardid","623465465465461975");
+        values.put("Balance",1000.0);
         db.insert("Card",null,values);
         values.clear();
 
         values.put("Phone","15990736815");
         values.put("Cardname","中国银行储蓄卡");
         values.put("Cardid","634254354353455555");
+        values.put("Balance",100.0);
         db.insert("Card",null,values);
         values.clear();
 
         values.put("Phone","12345678901");
         values.put("Cardname","中国银行储蓄卡");
         values.put("Cardid","625894554664782549");
+        values.put("Balance",10000.0);
         db.insert("Card",null,values);
         values.clear();
 
         values.put("Phone","12345678902");
         values.put("Cardname","中国银行信用卡");
         values.put("Cardid","623454355543644655");
+        values.put("Balance",500.0);
         db.insert("Card",null,values);
-        values.clear();
-
-        values.put("Balance",1000.00);
-        values.put("Cardid","623465465465461975");
-        db.insert("BankSpend",null,values);
-        values.clear();
-
-        values.put("Balance",1000.00);
-        values.put("Cardid","634254354353455555");
-        db.insert("BankSpend",null,values);
-        values.clear();
-
-        values.put("Balance",1000.00);
-        values.put("Cardid","625894554664782549");
-        db.insert("BankSpend",null,values);
-        values.clear();
-
-        values.put("Balance",100.00);
-        values.put("Cardid","623454355543644655");
-        db.insert("BankSpend",null,values);
         values.clear();
 
         values.put("SchoolCard","118902");

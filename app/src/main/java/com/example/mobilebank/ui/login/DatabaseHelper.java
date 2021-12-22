@@ -12,7 +12,8 @@ public class DatabaseHelper extends SQLiteOpenHelper
     private static final String CreateCard = "create table Card("
             + "Phone VARCHAR(20) ,"
             + "Cardname VARCHAR(30),"
-            + "Cardid text PRIMARY KEY ) ";
+            + "Cardid text PRIMARY KEY, "
+            + "Balance DOUBLE) ";
 
     private static final String CreateUser = "create table User("
             + "Phone VARCHAR(20) PRIMARY KEY,"
@@ -33,9 +34,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + "SchoolCard VARCHAR(20),"
             + "Money VARCHAR(20)) ";
 
-    private static final String Createcountbalance = "create table BankSpend("
-            + "Cardid VARCHAR(20) PRIMARY KEY,"
-            + "Balance DOUBLE) ";
 
     public DatabaseHelper(Context context)
     {
@@ -57,8 +55,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
         sqLiteDatabase.execSQL(Createbalance);
         //存储消费记录
         sqLiteDatabase.execSQL(Createspend);
-        //存储银行余额
-        sqLiteDatabase.execSQL(Createcountbalance);
 
     }
 
