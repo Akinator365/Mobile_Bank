@@ -63,7 +63,7 @@ public class addcard extends AppCompatActivity {
             ContentValues values;
             values = new ContentValues();
             values.put("Phone", phone);
-            values.put("Cardname", type);
+            values.put("Cardname", "中国银行"+type);
             values.put("Cardid", cardnum);
             values.put("Balance", 0);
             db.insert("Card", null, values);

@@ -3,15 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android Studio Project/Mobile_Bank/app/src/main/res/layout/activity_main.xml" value="0.12943262411347517" />
-        <entry key="..\:/Android Studio Project/Mobile_Bank/app/src/main/res/layout/activity_record.xml" value="0.12943262411347517" />
-        <entry key="..\:/Android Studio Project/Mobile_Bank/app/src/main/res/layout/fragment_dashboard.xml" value="0.12943262411347517" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/drawable-v24/shape_corner.xml" value="0.3764102564102564" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/drawable-v24/shape_corner1.xml" value="0.3764102564102564" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_addcard.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_addcard2.xml" value="0.36614583333333334" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_balance.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_bankcard.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_card_top_up.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_cardfee.xml" value="0.2046875" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_cardinfo.xml" value="0.2046875" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_deletecard.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_login_english_view.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_login_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_login_register_view.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/fragment_notifications.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/item.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/item2.xml" value="0.36614583333333334" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/item3.xml" value="0.36614583333333334" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/phone_code.xml" value="0.3645833333333333" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_bankcard.xml" value="0.36041666666666666" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/activity_record.xml" value="0.36041666666666666" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/fragment_dashboard.xml" value="0.36041666666666666" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/item.xml" value="0.36041666666666666" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/item2.xml" value="0.3534218590398366" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/item3.xml" value="0.36041666666666666" />
+        <entry key="..\:/Users/Akinator/AndroidStudioProjects/Mobile_Bank/app/src/main/res/layout/item4.xml" value="0.36041666666666666" />
       </map>
     </option>
   </component>
