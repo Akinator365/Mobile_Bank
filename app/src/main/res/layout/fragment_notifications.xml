@@ -49,6 +49,8 @@
             android:textColor="#0E161C"
             android:textSize="20dp"
             android:gravity="center_horizontal"
+            android:onClick="addcard"
+            android:id="@+id/addcard"
             />
     <LinearLayout
         android:layout_width="wrap_content"

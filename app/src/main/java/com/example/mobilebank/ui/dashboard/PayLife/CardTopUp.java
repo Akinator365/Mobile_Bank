@@ -20,6 +20,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.mobilebank.Data;
@@ -41,6 +42,7 @@ public class CardTopUp extends AppCompatActivity {
     private TextView topshowschool;
     private String code;
     private DatabaseHelper dbhelper;
+
 
 
     @Override

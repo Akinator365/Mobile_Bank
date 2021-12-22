@@ -37,9 +37,7 @@ public class Login_RegisterView extends AppCompatActivity
         numberReg = findViewById(R.id.numberReg);
         pswReg = findViewById(R.id.pswReg);
         RegisterReg = findViewById(R.id.RegisterReg);
-
         helper = new DatabaseHelper(this);
-
         RegisterReg.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -56,7 +54,6 @@ public class Login_RegisterView extends AppCompatActivity
         String password;
         SQLiteDatabase db;
         ContentValues values;
-
         phone = numberReg.getText().toString();
         if(SearchDB(phone))
         {

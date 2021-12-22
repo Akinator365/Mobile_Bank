@@ -50,6 +50,15 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="余额：1000元"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:id="@+id/money"/>
+
             </LinearLayout>
 
         </LinearLayout>
@@ -57,28 +66,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            android:layout_marginTop="10dp"
+            />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="转账"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:text="余额"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                />
-
-        </LinearLayout>
 
     </LinearLayout>
 

@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.mobilebank.Data;
@@ -23,6 +24,7 @@ public class Cardinfo extends AppCompatActivity {
     private TextView showbankcard;
     private TextView showschoolcard;
     private DatabaseHelper dbhelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,7 @@ public class Cardinfo extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         five.setOnClickListener(new View.OnClickListener() {
             @Override
