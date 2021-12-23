@@ -51,9 +51,10 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + "ID INTEGER PRIMARY KEY AUTOINCREMENT,"
             + "Phone VARCHAR(20),"
             + "Money DOUBLE,"
-            + "Date DATE,"
+            + "Date DATETIME,"
             + "BillType VARCHAR(20),"
-            + "CardID VARCHAR(20))";
+            + "CardID VARCHAR(20),"
+            + "CardType VARCHAR(20))";
 
     public DatabaseHelper(Context context)
     {

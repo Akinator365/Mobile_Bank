@@ -66,11 +66,18 @@ public class Record extends AppCompatActivity {
                 String cardID = cursor.getString(5);
                 String date = cursor.getString(3);
                 String money = cursor.getString(2);
+                String CardType = cursor.getString(6);
+                CardType = CardType.substring(CardType.length()-3,CardType.length());
+
 
                 i++;
                 Map<String,Object>map1 = new HashMap<String,Object>();
                 map1.put("文字1",billType);
-                map1.put("文字2",cardID);
+                map1.put("文字2",
+                        CardType
+                        + "(" +
+                        cardID.substring(cardID.length()-4, cardID.length())
+                        + ")");
                 map1.put("文字3",date);
                 map1.put("文字4",money);
                 mapset.add(map1);

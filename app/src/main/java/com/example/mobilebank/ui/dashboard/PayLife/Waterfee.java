@@ -48,17 +48,12 @@ public class Waterfee extends AppCompatActivity {
                 SQLiteDatabase db = dbhelper.getWritableDatabase();
                 Cursor cursor = db.query("Waterfee", null, "Waternum=?",
                         new String[]{username}, null, null, null);
-                cursor.moveToFirst();
-                {
-                    fee = cursor.getDouble(1);
-                }
-                cursor.close();
 
-                if(fee <= 0.001)
+                if(cursor.getCount() == 0)
                 {
                     AlertDialog.Builder builder = new AlertDialog.Builder(Waterfee.this);
                     builder.setTitle("提示");
-                    builder.setMessage("当前用户没有欠费");
+                    builder.setMessage("找不到该记录");
                     builder.setPositiveButton("确定", new DialogInterface.OnClickListener()
                     {
                         @Override
@@ -71,10 +66,35 @@ public class Waterfee extends AppCompatActivity {
                 }
                 else
                 {
-                    showfee.setVisibility(View.VISIBLE);
-                    showfee.setText("当前欠费金额："+String.valueOf(fee));
-                    next.setVisibility(View.VISIBLE);
-                    app.setfee(fee);
+                    cursor.moveToFirst();
+                    {
+                        fee = cursor.getDouble(1);
+                    }
+                    cursor.close();
+
+                    if(fee <= 0.001)
+                    {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Waterfee.this);
+                        builder.setTitle("提示");
+                        builder.setMessage("当前用户没有欠费");
+                        builder.setPositiveButton("确定", new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i)
+                            {
+
+                            }
+                        });
+                        builder.show();
+                    }
+                    else
+                    {
+                        showfee.setVisibility(View.VISIBLE);
+                        showfee.setText("当前欠费金额："+String.valueOf(fee));
+                        next.setVisibility(View.VISIBLE);
+                        app.setfee(fee);
+
+                    }
 
                 }
             }

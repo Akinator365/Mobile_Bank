@@ -383,34 +383,42 @@ public class Login_MainActivity extends AppCompatActivity
         db.insert("schoolfare",null,values);
         values.clear();
 
+        values.put("ID",1);
         values.put("Phone","12345678902");
         values.put("Money","5000");
-        values.put("Date","2010-12-30");
+        values.put("Date","2010-12-30 12:00:00");
         values.put("BillType","工资");
         values.put("CardID","54654856456");
+        values.put("CardType","信用卡");
         db.insert("bill",null,values);
         values.clear();
 
+        values.put("ID",2);
         values.put("Phone","12345678901");
         values.put("Money","4000");
-        values.put("Date","2011-12-30");
+        values.put("Date","2011-12-30 12:00:00");
         values.put("BillType","工资");
         values.put("CardID","54654856456");
+        values.put("CardType","借记卡");
         db.insert("bill",null,values);
         values.clear();
 
+        values.put("ID",3);
         values.put("Phone","12345678901");
         values.put("Money","3000");
-        values.put("Date","2012-12-30");
+        values.put("Date","2012-12-30 12:00:00");
         values.put("BillType","工资");
         values.put("CardID","54654856456");
+        values.put("CardType","储蓄卡");
         db.insert("bill",null,values);
         values.clear();
 
+        values.put("ID",4);
         values.put("Phone","12345678901");
         values.put("Money","-2000");
-        values.put("Date","2013-12-30");
+        values.put("Date","2013-12-30 12:00:00");
         values.put("BillType","学费");
+        values.put("CardType","学生卡");
         values.put("CardID","54654856456");
         db.insert("bill",null,values);
         values.clear();

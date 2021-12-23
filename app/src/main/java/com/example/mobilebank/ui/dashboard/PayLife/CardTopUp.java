@@ -29,6 +29,8 @@ import com.example.mobilebank.ui.login.DatabaseHelper;
 import com.example.mobilebank.ui.login.Login_MainActivity;
 import com.example.mobilebank.ui.login.Login_RegisterView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 public class CardTopUp extends AppCompatActivity {
@@ -137,6 +139,29 @@ public class CardTopUp extends AppCompatActivity {
                         values.put("money",newmoney);
                         db.update("Schoolbalance", values, "SchoolCard=?",
                                 new String[]{app.getCurrPayid()});
+                        values.clear();
+
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                        // HH:mm:ss
+                        // 获取当前时间
+                        Date date = new Date(System.currentTimeMillis());
+                        String CardType;
+                        cursor = db.query("Card", null, "Cardid=?",
+                                new String[]{app.getcurrbankcard()}, null, null, null);
+                        cursor.moveToFirst();
+                        {
+                            CardType = cursor.getString(1);
+                        }
+                        cursor.close();
+
+                        values.put("Phone",app.getcurrentuser());
+                        values.put("Money",moneycost*(-1));
+                        values.put("Date",simpleDateFormat.format(date));
+                        values.put("BillType","校园卡缴费");
+                        values.put("CardType",CardType);
+                        values.put("CardID",app.getcurrbankcard());
+                        db.insert("bill",null,values);
+                        values.clear();
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(CardTopUp.this);
                         builder.setTitle("提示");

@@ -25,6 +25,8 @@ import com.example.mobilebank.R;
 import com.example.mobilebank.ui.login.DatabaseHelper;
 
 import java.security.PrivateKey;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Cardfee extends AppCompatActivity {
 
@@ -124,6 +126,12 @@ public class Cardfee extends AppCompatActivity {
                     }
                     cursor.close();
 
+
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    // HH:mm:ss
+                    // 获取当前时间
+                    Date date = new Date(System.currentTimeMillis());
+
                     if(currmoney > app.getfee())
                     {
                         ContentValues values = new ContentValues();
@@ -132,23 +140,68 @@ public class Cardfee extends AppCompatActivity {
                                 new String[]{app.getcurrbankcard()});
                         values.clear();
 
+                        String CardType;
+                        cursor = db.query("Card", null, "Cardid=?",
+                                new String[]{app.getcurrbankcard()}, null, null, null);
+                        cursor.moveToFirst();
+                        {
+                            CardType = cursor.getString(1);
+                        }
+                        cursor.close();
+
                         if(app.getlastview() == 0)
                         {
                             values.put("Watertopay",0.00);
                             db.update("Waterfee", values, "Waternum=?",
                                     new String[]{app.getCurrPayid()});
+                            values.clear();
+
+
+
+                            values.put("Phone",app.getcurrentuser());
+                            values.put("Money",app.getfee()*(-1));
+                            values.put("Date",simpleDateFormat.format(date));
+                            values.put("BillType","水费");
+                            values.put("CardType",CardType);
+                            values.put("CardID",app.getcurrbankcard());
+                            db.insert("bill",null,values);
+                            values.clear();
                         }
+
+
                         else if(app.getlastview() == 1)
                         {
                             values.put("Electrtopay",0.00);
                             db.update("electricityfee", values, "Electrnum=?",
                                     new String[]{app.getCurrPayid()});
+                            values.clear();
+
+                            values.put("Phone",app.getcurrentuser());
+                            values.put("Money",app.getfee()*(-1));
+                            values.put("Date",simpleDateFormat.format(date));
+                            values.put("BillType","电费");
+                            values.put("CardType",CardType);
+                            values.put("CardID",app.getcurrbankcard());
+                            db.insert("bill",null,values);
+                            values.clear();
                         }
+
+
                         else if(app.getlastview() == 2)
                         {
                             values.put("Fare",0.00);
                             db.update("schoolfare", values, "Studentnum=? AND Year=?",
                                     new String[]{app.getCurrPayid(),app.getyear()});
+                            values.clear();
+
+                            values.put("Phone",app.getcurrentuser());
+                            values.put("Money",app.getfee()*(-1));
+                            values.put("Date",simpleDateFormat.format(date));
+                            values.put("BillType","学费");
+                            values.put("CardType",CardType);
+                            values.put("CardID",app.getcurrbankcard());
+                            db.insert("bill",null,values);
+                            values.clear();
                         }
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(Cardfee.this);

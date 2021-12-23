@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="80dp"
+                android:layout_marginLeft="60dp"
                 >
 
                 <TextView
@@ -58,7 +58,7 @@
                     android:layout_marginLeft="10dp"
                     android:text="2020-12-20"
                     android:textSize="20sp"
-                    android:layout_gravity="right"
+
                     />
 
                 <TextView
