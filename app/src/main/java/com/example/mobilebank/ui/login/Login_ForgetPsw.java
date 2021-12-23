@@ -118,9 +118,6 @@ public class Login_ForgetPsw extends AppCompatActivity
                 {
                     return;
                 }
-
-                Intent intent = new Intent(Login_ForgetPsw.this, Login_MainActivity.class);
-                startActivity((intent));
                 finish();
 
             }

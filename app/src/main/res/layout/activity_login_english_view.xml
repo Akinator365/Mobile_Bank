@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="15dp"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -78,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
-        android:background="#ff0000"
+        android:background="#DF2242"
         android:text="Login"
         android:textColor="#ffff"
         android:textSize="20sp"

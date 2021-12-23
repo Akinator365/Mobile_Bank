@@ -72,7 +72,7 @@
             android:layout_weight="1"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="60dp"
-            android:background="#ff00"
+            android:background="#DF2242"
             android:text="退出登录"
             android:textColor="#ffff"
             android:textSize="20sp"

@@ -96,14 +96,12 @@ public class Login_MainActivity extends AppCompatActivity
     {
         Intent intent = new Intent(Login_MainActivity.this, Login_RegisterView.class);
         startActivity(intent);
-        finish();
     }
 
     private void forget()
     {
         Intent intent = new Intent(Login_MainActivity.this, Login_ForgetPsw.class);
         startActivity((intent));
-        finish();
     }
     private void logon()
     {
@@ -141,7 +139,6 @@ public class Login_MainActivity extends AppCompatActivity
                         Intent intent = new Intent(Login_MainActivity.this,
                                 Login_RegisterView.class);
                         startActivity((intent));
-                        finish();
                     }
                 });
                 builder.setNegativeButton("否", new DialogInterface.OnClickListener()
@@ -150,6 +147,7 @@ public class Login_MainActivity extends AppCompatActivity
                     public void onClick(DialogInterface dialogInterface, int i)
                     {
                         phone.setText("");
+                        psw.setText("");
                     }
                 });
 

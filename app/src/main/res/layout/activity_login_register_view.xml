@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="15dp"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="自主注册"
+            android:text="自助注册"
             android:textSize="20sp" />
     </RelativeLayout>
 
@@ -93,7 +95,7 @@
             android:layout_height="50dp"
             android:layout_below="@+id/temp13"
             android:layout_marginTop="50dp"
-            android:background="#ff00"
+            android:background="#DF2242"
             android:text="注册"
             android:textColor="#ffff"
             android:textSize="20sp"

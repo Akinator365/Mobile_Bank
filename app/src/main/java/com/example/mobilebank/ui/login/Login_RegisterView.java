@@ -78,7 +78,7 @@ public class Login_RegisterView extends AppCompatActivity
             {
                 return;
             }
-            Back();
+            finish();
         }
         else
         {
