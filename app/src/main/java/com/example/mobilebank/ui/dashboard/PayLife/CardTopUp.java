@@ -248,7 +248,4 @@ public class CardTopUp extends AppCompatActivity {
         return false;
     }
 
-
-
-
 }

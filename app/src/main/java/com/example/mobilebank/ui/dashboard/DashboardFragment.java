@@ -71,7 +71,7 @@ public class DashboardFragment extends Fragment {
         });
 
         ImageButton btn_zhuanzhang = (ImageButton) getActivity().findViewById(R.id.zhuanzhang);
-        btn_zhangdan.setOnClickListener(new View.OnClickListener() {
+        btn_zhuanzhang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), RemittanceActivity.class);
@@ -80,7 +80,7 @@ public class DashboardFragment extends Fragment {
         });
 
         ImageButton btn_jilu = (ImageButton) getActivity().findViewById(R.id.jilu);
-        btn_zhangdan.setOnClickListener(new View.OnClickListener() {
+        btn_jilu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), RemittanceRecord.class);

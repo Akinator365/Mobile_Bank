@@ -15,10 +15,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + "Cardid text PRIMARY KEY, "
             + "Balance DOUBLE) ";
 
-    private static final String CreateUser = "create table User("
-            + "Phone VARCHAR(20) PRIMARY KEY,"
-            + "Name VARCHAR(30)) ";
-
     private static final String CreateSchoolcard = "create table School("
             + "SchoolCard VARCHAR(20) PRIMARY KEY,"
             + "Phone VARCHAR(20)) ";
@@ -62,7 +58,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + "Money DOUBLE,"
             + "Date DATETIME,"
             + "GetCardID VARCHAR(20),"
-            + "Attach VARCHAR(20))";
+            + "Attachment VARCHAR(20))";
 
     public DatabaseHelper(Context context)
     {
