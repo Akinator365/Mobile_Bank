@@ -53,10 +53,10 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + "CardType VARCHAR(20))";
 
     private static final String Createtransfer = "create table transfer("
-            + "ID INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + "PayCardID VARCHAR(20),"
+            + "_id VARCHAR(20),"
+            + "PayCardID VARCHAR(20)PRIMARY KEY,"
             + "Money DOUBLE,"
-            + "Date DATETIME,"
+            + "Receiver VARCHAR(20) ,"
             + "GetCardID VARCHAR(20),"
             + "Attachment VARCHAR(20))";
 

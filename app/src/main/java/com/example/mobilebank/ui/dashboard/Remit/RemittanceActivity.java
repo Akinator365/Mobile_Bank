@@ -213,6 +213,22 @@ public class RemittanceActivity extends AppCompatActivity {
                                                     new String[]{GetCardID});
                                             values.clear();
 
+                                            //生成转账记录
+                                            ContentValues cv = new ContentValues();
+                                            cv.put("PayCardID",PayCardID);
+                                            cv.put("Money",Double.parseDouble(PayMoney));
+                                            cv.put("Receiver",Receiver);
+                                            cv.put("GetCardID",GetCardID);
+                                            cv.put("Attachment",Attachment);
+                                            db.insert("transfer",null,cv);//将数据添加到数据表
+                                            db.update("transfer",cv,"PayCardID=?",new String[]{PayCardID});
+                                            cv.clear();
+
+
+
+
+
+
                                             AlertDialog.Builder builder = new AlertDialog.Builder(RemittanceActivity.this);
                                             builder.setTitle("提示");
                                             builder.setMessage("转账成功");
