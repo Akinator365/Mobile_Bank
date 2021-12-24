@@ -181,33 +181,21 @@ public class Login_MainActivity extends AppCompatActivity
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
+        values.put("Phone","15990736815");
+        values.put("Password","123456");
         values.put("Name","林伟涵");
-        values.put("Phone","15990736815");
-        db.insert("User",null,values);
+        db.insert("information",null,values);
         values.clear();
 
+        values.put("Phone","12345678901");
+        values.put("Password","123456");
         values.put("Name","林驰程");
-        values.put("Phone","12345678901");
-        db.insert("User",null,values);
+        db.insert("information",null,values);
         values.clear();
 
+        values.put("Phone","12345678902");
+        values.put("Password","123456");
         values.put("Name","尤培杰");
-        values.put("Phone","12345678902");
-        db.insert("User",null,values);
-        values.clear();
-
-        values.put("Phone","15990736815");
-        values.put("Password","123456");
-        db.insert("information",null,values);
-        values.clear();
-
-        values.put("Phone","12345678901");
-        values.put("Password","123456");
-        db.insert("information",null,values);
-        values.clear();
-
-        values.put("Phone","12345678902");
-        values.put("Password","123456");
         db.insert("information",null,values);
         values.clear();
 

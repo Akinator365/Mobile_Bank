@@ -56,6 +56,14 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + "CardID VARCHAR(20),"
             + "CardType VARCHAR(20))";
 
+    private static final String Createtransfer = "create table transfer("
+            + "ID INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + "PayCardID VARCHAR(20),"
+            + "Money DOUBLE,"
+            + "Date DATETIME,"
+            + "GetCardID VARCHAR(20),"
+            + "Attach VARCHAR(20))";
+
     public DatabaseHelper(Context context)
     {
         super(context, "info.db", null, 1);
@@ -65,11 +73,9 @@ public class DatabaseHelper extends SQLiteOpenHelper
     {
         //创建账号密码表
         sqLiteDatabase.execSQL("CREATE TABLE information(" +
-                "Phone VARCHAR(20) PRIMARY KEY, Password VARCHAR(20))");
+                "Phone VARCHAR(20) PRIMARY KEY, Password VARCHAR(20),Name VARCHAR(20))");
         //创建银行卡表
         sqLiteDatabase.execSQL(CreateCard);
-        //存储用户姓名和手机号
-        sqLiteDatabase.execSQL(CreateUser);
         //存储校园卡号和手机号
         sqLiteDatabase.execSQL(CreateSchoolcard);
         //存储校园卡余额
@@ -84,6 +90,8 @@ public class DatabaseHelper extends SQLiteOpenHelper
         sqLiteDatabase.execSQL(Createschoolfare);
         //存储流水记录
         sqLiteDatabase.execSQL(Createbill);
+        //存储转账记录
+        sqLiteDatabase.execSQL(Createtransfer);
 
     }
 

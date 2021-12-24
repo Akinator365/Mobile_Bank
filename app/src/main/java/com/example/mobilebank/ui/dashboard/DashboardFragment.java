@@ -17,6 +17,8 @@ import com.example.mobilebank.R;
 import com.example.mobilebank.databinding.FragmentDashboardBinding;
 import com.example.mobilebank.ui.dashboard.BillingRecords.Record;
 import com.example.mobilebank.ui.dashboard.PayLife.Pay;
+import com.example.mobilebank.ui.dashboard.Remit.RemittanceActivity;
+import com.example.mobilebank.ui.dashboard.Remit.RemittanceRecord;
 
 public class DashboardFragment extends Fragment {
 
@@ -64,6 +66,24 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), Record.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton btn_zhuanzhang = (ImageButton) getActivity().findViewById(R.id.zhuanzhang);
+        btn_zhangdan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), RemittanceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton btn_jilu = (ImageButton) getActivity().findViewById(R.id.jilu);
+        btn_zhangdan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), RemittanceRecord.class);
                 startActivity(intent);
             }
         });

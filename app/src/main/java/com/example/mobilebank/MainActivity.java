@@ -92,24 +92,6 @@ public class MainActivity extends AppCompatActivity {
         final Data app = (Data)getApplication();
         app.setcurrentuser(currentacc);
 
-        makedata();
-    }
-
-    private void makedata() {
-        SQLiteDatabase db = dbhelper.getWritableDatabase();
-        Cursor cursor = db.query("User", null, "Phone=?",
-                new String[]{currentacc}, null, null, null);
-        cursor.moveToFirst();
-        String currname = "error";
-        if(cursor.getCount() == 0)
-        {
-            //TODO: 错误
-        }
-        else {
-            currname = cursor.getString(1);
-        }
-        cursor.close();
-        db.close();
     }
 
 }

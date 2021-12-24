@@ -4,20 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="20dp"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <ImageButton
-        android:id="@+id/shenghuo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/shenghuo"
-        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/shenghuo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/shenghuo"
+            />
+
+        <ImageButton
+            android:id="@+id/zhangdan"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/zhangdan"
+            />
+
+        <ImageButton
+            android:id="@+id/zhuanzhang"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/shenghuo"
+            />
+    </LinearLayout>
 
     <ImageButton
-        android:id="@+id/zhangdan"
+        android:id="@+id/jilu"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleType="fitXY"
