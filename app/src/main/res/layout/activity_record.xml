@@ -4,12 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.dashboard.BillingRecords.Record">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/btn_starttime"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="起始时间"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_starttime"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/btn_endtime"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="截止时间"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_endtime"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="金额范围"
+            android:textSize="18dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:gravity="center"
+            android:hint="最小金额"
+            android:id="@+id/et_minmoney"
+            android:layout_width="140dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="—"
+            android:textSize="18dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:gravity="center"
+            android:hint="最大金额"
+            android:id="@+id/et_maxmoney"
+            android:layout_width="140dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="银行卡类型"
+            android:textSize="18dp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:id="@+id/sp_cardtype"
+            android:layout_width="120dp"
+            android:entries="@array/cardType"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="收支类型"
+            android:textSize="18dp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:id="@+id/sp_billtype"
+            android:layout_width="130dp"
+            android:entries="@array/billType"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="重置"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="确认"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#000000" />
 
     <ListView
         android:id="@+id/mainListView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

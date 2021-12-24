@@ -155,11 +155,12 @@ public class CardTopUp extends AppCompatActivity {
                         cursor.close();
 
                         values.put("Phone",app.getcurrentuser());
-                        values.put("Money",moneycost*(-1));
+                        values.put("Money",moneycost);
                         values.put("Date",simpleDateFormat.format(date));
                         values.put("BillType","校园卡缴费");
                         values.put("CardType",CardType);
                         values.put("CardID",app.getcurrbankcard());
+                        values.put("BillAttach","支出");
                         db.insert("bill",null,values);
                         values.clear();
 

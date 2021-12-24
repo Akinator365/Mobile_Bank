@@ -156,14 +156,13 @@ public class Cardfee extends AppCompatActivity {
                                     new String[]{app.getCurrPayid()});
                             values.clear();
 
-
-
                             values.put("Phone",app.getcurrentuser());
-                            values.put("Money",app.getfee()*(-1));
+                            values.put("Money",app.getfee());
                             values.put("Date",simpleDateFormat.format(date));
                             values.put("BillType","水费");
                             values.put("CardType",CardType);
                             values.put("CardID",app.getcurrbankcard());
+                            values.put("BillAttach","支出");
                             db.insert("bill",null,values);
                             values.clear();
                         }
@@ -177,11 +176,12 @@ public class Cardfee extends AppCompatActivity {
                             values.clear();
 
                             values.put("Phone",app.getcurrentuser());
-                            values.put("Money",app.getfee()*(-1));
+                            values.put("Money",app.getfee());
                             values.put("Date",simpleDateFormat.format(date));
                             values.put("BillType","电费");
                             values.put("CardType",CardType);
                             values.put("CardID",app.getcurrbankcard());
+                            values.put("BillAttach","支出");
                             db.insert("bill",null,values);
                             values.clear();
                         }
@@ -195,11 +195,12 @@ public class Cardfee extends AppCompatActivity {
                             values.clear();
 
                             values.put("Phone",app.getcurrentuser());
-                            values.put("Money",app.getfee()*(-1));
+                            values.put("Money",app.getfee());
                             values.put("Date",simpleDateFormat.format(date));
                             values.put("BillType","学费");
                             values.put("CardType",CardType);
                             values.put("CardID",app.getcurrbankcard());
+                            values.put("BillAttach","支出");
                             db.insert("bill",null,values);
                             values.clear();
                         }

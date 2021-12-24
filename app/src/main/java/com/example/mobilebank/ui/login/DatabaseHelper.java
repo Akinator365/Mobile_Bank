@@ -50,7 +50,8 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + "Date DATETIME,"
             + "BillType VARCHAR(20),"
             + "CardID VARCHAR(20),"
-            + "CardType VARCHAR(20))";
+            + "CardType VARCHAR(20) ,"
+            + "BillAttach VARCHAR(10))";
 
     private static final String Createtransfer = "create table transfer("
             + "_id VARCHAR(20),"
